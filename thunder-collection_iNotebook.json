@@ -1,0 +1,193 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "iNotebook",
+    "dateExported": "2023-04-11T16:32:34.319Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "609c16c8-e338-41ab-a4f1-1cc486b4dff2",
+            "name": "Authentication",
+            "containerId": "",
+            "created": "2023-03-20T19:40:09.126Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "2682eeb4-7db3-48df-a273-a5f9f4a5c9c7",
+            "name": "Notes",
+            "containerId": "",
+            "created": "2023-03-25T16:56:42.638Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "6677bf28-6abb-41c0-b556-00ec7fbb9c23",
+            "colId": "0d4bf9de-39af-415d-98a7-2baf762d3a87",
+            "containerId": "609c16c8-e338-41ab-a4f1-1cc486b4dff2",
+            "name": "Create a new user",
+            "url": "localhost:3001/api/auth/createuser",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-20T19:40:27.081Z",
+            "modified": "2023-03-23T19:49:55.901Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"rama\",\n  \"email\": \"rama@gmail.com\",\n  \"password\": \"1234567\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c396a973-39cd-4a21-aab6-0ae2cd44c2b0",
+            "colId": "0d4bf9de-39af-415d-98a7-2baf762d3a87",
+            "containerId": "609c16c8-e338-41ab-a4f1-1cc486b4dff2",
+            "name": "User login using credentials",
+            "url": "localhost:3001/api/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-03-25T16:23:23.275Z",
+            "modified": "2023-03-25T16:34:03.201Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"rama@gmail.com\",\n  \"password\": \"1234567\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "680a2e55-28cd-4846-944d-35451df2b041",
+            "colId": "0d4bf9de-39af-415d-98a7-2baf762d3a87",
+            "containerId": "609c16c8-e338-41ab-a4f1-1cc486b4dff2",
+            "name": "get user data",
+            "url": "localhost:3001/api/auth/getuser",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-03-25T16:52:30.030Z",
+            "modified": "2023-03-25T16:55:56.316Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQxY2FkNjNlMWEwNDAxNGM1ZDE0NGQxIn0sImlhdCI6MTY3OTc2MjQ3N30.kPS2H2lEq00drWXNJkNrwDBV8Sla0acsA72PZcWPFu4"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5ea6d38f-2f78-46f8-a9d5-c40646cbadf0",
+            "colId": "0d4bf9de-39af-415d-98a7-2baf762d3a87",
+            "containerId": "2682eeb4-7db3-48df-a273-a5f9f4a5c9c7",
+            "name": "Fetch All Notes ",
+            "url": "localhost:3001/api/notes/fetchallnotes",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-04-11T14:19:21.633Z",
+            "modified": "2023-04-11T15:07:53.318Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQxY2FkNjNlMWEwNDAxNGM1ZDE0NGQxIn0sImlhdCI6MTY3OTc2MjQ3N30.kPS2H2lEq00drWXNJkNrwDBV8Sla0acsA72PZcWPFu4"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4ac2ebe4-30b6-4327-8bb1-bd49b2bb4af9",
+            "colId": "0d4bf9de-39af-415d-98a7-2baf762d3a87",
+            "containerId": "2682eeb4-7db3-48df-a273-a5f9f4a5c9c7",
+            "name": "Add a note",
+            "url": "localhost:3001/api/notes/addnote",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-04-11T14:47:11.162Z",
+            "modified": "2023-04-11T15:05:51.356Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQxY2FkNjNlMWEwNDAxNGM1ZDE0NGQxIn0sImlhdCI6MTY3OTc2MjQ3N30.kPS2H2lEq00drWXNJkNrwDBV8Sla0acsA72PZcWPFu4"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"My Title 2\",\n  \"description\": \"My desc 2\",\n  \"tag\": \"tag21 tag2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a54fb477-39c4-4ae5-936d-b6b0f4bf00fb",
+            "colId": "0d4bf9de-39af-415d-98a7-2baf762d3a87",
+            "containerId": "2682eeb4-7db3-48df-a273-a5f9f4a5c9c7",
+            "name": "Update an existing Note",
+            "url": "localhost:3001/api/notes/updatenote/6435769e5e0ad0a8d02c03d1",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-04-11T15:20:40.020Z",
+            "modified": "2023-04-11T15:23:11.337Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQxY2FkNjNlMWEwNDAxNGM1ZDE0NGQxIn0sImlhdCI6MTY3OTc2MjQ3N30.kPS2H2lEq00drWXNJkNrwDBV8Sla0acsA72PZcWPFu4"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"My Title 2 updated\",\n  \"description\": \"My desc 2 updated\",\n  \"tag\": \"tag21 tag2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6f166d04-f84b-429e-a7f7-ed477351d061",
+            "colId": "0d4bf9de-39af-415d-98a7-2baf762d3a87",
+            "containerId": "2682eeb4-7db3-48df-a273-a5f9f4a5c9c7",
+            "name": "Delete a note",
+            "url": "localhost:3001/api/notes/deletenote/6435769e5e0ad0a8d02c03d1",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-04-11T15:40:24.817Z",
+            "modified": "2023-04-11T15:42:47.296Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQxY2FkNjNlMWEwNDAxNGM1ZDE0NGQxIn0sImlhdCI6MTY3OTc2MjQ3N30.kPS2H2lEq00drWXNJkNrwDBV8Sla0acsA72PZcWPFu4"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

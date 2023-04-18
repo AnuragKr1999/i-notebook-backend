@@ -19,7 +19,6 @@ router.get('/fetchallnotes', fetchuser, async (req, res) => {
 //Route 2: Add a new note: POST "/api/notes/addnote". login required
 router.post('/addnote', fetchuser,[
     body("title", "Enter a valid body").isLength({min: 3}),
-    body("description", "Enter a valid description").isLength({ min: 3 }),
 ], async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
